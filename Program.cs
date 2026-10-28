@@ -255,7 +255,7 @@ void main() { gl_FragColor = vec4(vCol, 1.0); }";
         {
             _acc = 0;
             var (roll, pitch, yaw) = ToEulerDeg(q);
-            _win.Title = $"X red {roll:+0;-0;0}°   |   Y green {pitch:+0;-0;0}°   |   Z blue {yaw:+0;-0;0}°";
+             _win.Title = $"X red {roll:+0;-0;0}°   |   Y green {pitch:+0;-0;0}°   |   Z blue {yaw:+0;-0;0}°";
         }
     }
 
@@ -304,6 +304,7 @@ void main() { gl_FragColor = vec4(vCol, 1.0); }";
             0, 0, 2 * far * near / (near - far), 0);
     }
 
+    
     static (float roll, float pitch, float yaw) ToEulerDeg(Quaternion q)
     {
         const float d = 180f / MathF.PI;
